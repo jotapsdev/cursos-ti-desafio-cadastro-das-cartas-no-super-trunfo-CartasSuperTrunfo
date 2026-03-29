@@ -17,6 +17,9 @@ int main() {
     float Areakm2, area;
     float PIB, pib;
     int PontosTR, pontos;
+    float PIBp, Denisdade, pibp, densidade;
+    float SuperPoder, superpoder; 
+    float comparação; 
 
     // Cadastro das Cartas:
     
@@ -44,6 +47,14 @@ int main() {
     printf("Insira o numero de pontos turisticos: \n", PontosTR);
     scanf(" %d", &PontosTR);
 
+/* adicionando propriedade as cartas */
+
+    Denisdade = População / Areakm2;
+    
+    PIBp = PIB / População;
+
+    SuperPoder = (População + Areakm2 + PIB + PIBp + (Denisdade / 1) + PontosTR);
+
 // Exibição dos Dados das Cartas:
 
  printf("\n--- Dados da Carta ---\n");
@@ -53,7 +64,11 @@ int main() {
     printf("Populacao: %d\n", População);
     printf("Area: %.2f km2\n", Areakm2);
     printf("PIB: %.2f\n", PIB);
-    printf("Pontos Turisticos: %d\n\n\n", PontosTR);
+    printf("Pontos Turisticos: %d\n", PontosTR);
+    printf("Densidade: %f\n", Denisdade);
+    printf("PIB percapta: %f\n", PIBp);
+    printf("Super Poder: %.2f\n\n\n", SuperPoder);
+
 
     // Cadastro das Cartas 2:
 
@@ -80,6 +95,14 @@ int main() {
     printf("Insira o numero de pontos turisticos: \n", pontos);
     scanf(" %d", &pontos);
 
+/* adicionando propriedade as cartas */
+
+    densidade = populacao / area;
+
+    pibp = pib / populacao;
+
+     superpoder = (populacao + area + pib + pibp + (densidade / 1) + pontos);
+
 // Exibição dos Dados das Cartas 2:
 
  printf("\n--- Dados da Carta 2---\n");
@@ -90,6 +113,24 @@ int main() {
     printf("Area: %.2f km2\n", area);
     printf("PIB: %.2f\n", pib);
     printf("Pontos Turisticos: %d\n", pontos);
+    printf("Densidade: %f\n", densidade);
+    printf("PIB percapta: %f\n", pibp);
+    printf("Super Poder: %.2f\n\n\n", superpoder);
+
+
+    /* comparação de poder */
+    printf("COMPARAÇÃO DE PODERES\n\n\n");
+    printf("Se 01 Verdadeiro | Se 00 Falso\n\n");
+
+
+    comparação = ( SuperPoder > superpoder ); 
+
+    printf("A carta %s é maior que %s: %.2f \n", Codigo, codigo, comparação); 
+     printf("A carta %s é maior que %s: %.2f \n", codigo, Codigo, comparação);
+
+
+
+
 
 
 
